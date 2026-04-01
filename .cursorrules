@@ -1,0 +1,22 @@
+# Cursor AI Configuration for Portfolio 2026
+
+## Example Files Directory
+When building components or features, reference example files from the `.cursor/examples/` directory for:
+- Component patterns and structure
+- Code style and conventions
+- Best practices for this project
+
+## Project Context
+This is a React portfolio website built with Vite. Use the example files as templates when creating new components or features.
+
+## Typography
+Headings use **Arvo**; load fonts via `src/styles/fonts.css` (imported from `index.css`). Body copy on case-study pages uses **Raleway**; base UI uses **Inter**.
+
+## Example Files Location
+Example files are located in: `.cursor/examples/`
+
+Reference these files when:
+- Creating new React components
+- Setting up data structures
+- Implementing styling patterns
+- Building portfolio features
