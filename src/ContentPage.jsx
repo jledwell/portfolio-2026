@@ -1,9 +1,13 @@
+import { Link } from 'react-router-dom'
 import './styles/ContentPage.css'
 import { contentData, contentTags, summaryColumns } from './contentData'
 
 function ContentPage() {
   return (
     <div className="content-page">
+      <Link to="/" className="content-back-link">
+        ← Back to Portfolio
+      </Link>
       <h1 className="content-page-title">Data Platform Product Integration</h1>
       <div className="content-page-tags">
         {contentTags.map((tag) => (
