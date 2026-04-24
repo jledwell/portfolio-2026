@@ -51,7 +51,7 @@ export const contentData = [
       'Autodesk’s strategy demanded connecting products with platform services using common data schemas.'
     ],
     imageLabel: 'Situation Graphic',
-    imagePath: '/images/typing-in-fields-full.gif'
+    imagePath: '/images/01%20platform/typing-in-fields-full.gif'
   },
   {
     // Discovery & Insights section
@@ -66,11 +66,11 @@ export const contentData = [
     imageLabel: 'Obstacles Graphic',
     images: [
       {
-        imagePath: '/images/personas.png',
+        imagePath: '/images/01%20platform/personas.png',
         imageOverlay: 'Target personas reconciled'
       },
       {
-        imagePath: '/images/workshop%20whiteboard.png',
+        imagePath: '/images/01%20platform/workshop%20whiteboard.png',
         imageOverlay: 'Stakeholder workshop whiteboard'
       }
     ]
@@ -91,7 +91,7 @@ export const contentData = [
     imageLabel: 'Action Graphic',
     images: [
       {
-        imagePath: '/images/Existing%20dialog%20to%20new.png',
+        imagePath: '/images/dialog-simplification.png',
         imageOverlay: 'Simplifying for customer context'
       },
       {

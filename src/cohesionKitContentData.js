@@ -1,7 +1,7 @@
 // Content for CohesionKitPage — same shape as contentData.js for ContentPage.
-// Images live in public/images/02 cohesion-kit/ (spaces encoded as %20 in URLs).
+// Images live in public/images/02 cohesion kit/ (spaces encoded as %20 in URLs).
 
-const CK = '/images/02%20cohesion-kit'
+const CK = '/images/02%20cohesion%20kit'
 
 export const cohesionKitSummaryColumns = [
   {
@@ -21,6 +21,7 @@ export const cohesionKitSummaryColumns = [
     bulletPoints: [
       'Partnered with product designers to align on modular patterns.',
       'Co-tested with product users and rapidly iterated prototypes with AI.',
+      'Defined a partner engagement model.'
     ],
   },
   {
@@ -34,6 +35,37 @@ export const cohesionKitSummaryColumns = [
 
 export const cohesionKitContentTags = ['Design', 'Systems', 'Placeholder']
 
+export const cohesionKitImageGallery = [
+  {
+    imagePath: `${CK}/Scale%20design%20with%20better%20visual%20storytelling.png`,
+    imageOverlay: 'Lorem Ipsum',
+  },
+  {
+    imagePath: `${CK}/create-dialog-sizes.png`,
+    imageOverlay: 'Lorem Ipsum',
+  },
+  {
+    imagePath: `${CK}/filter-and-search-anatomy.png`,
+    imageOverlay: 'Lorem Ipsum',
+  },
+  {
+    imagePath: `${CK}/filter-and-search-sizes.png`,
+    imageOverlay: 'Lorem Ipsum',
+  },
+  {
+    imagePath: `${CK}/final-engagement-model.png`,
+    imageOverlay: 'Lorem Ipsum',
+  },
+  {
+    imagePath: `${CK}/multiple-examples-illustrating-flexibility.png`,
+    imageOverlay: 'Lorem Ipsum',
+  },
+  {
+    imagePath: `${CK}/promote-component-reuse-with-patterns.png`,
+    imageOverlay: 'Lorem Ipsum',
+  },
+]
+
 export const cohesionKitContentData = [
   {
     heading: 'Challenges',
@@ -46,18 +78,18 @@ export const cohesionKitContentData = [
     ],
     images: [
       {
-        imagePath: `${CK}/data-ecosystem-sketch.jpg`,
-        imageOverlay: 'Data ecosystem sketch',
+        imagePath: '/images/dialog-simplification.png',
+        imageOverlay: 'Dialog simplification',
       },
       {
-        imagePath: `${CK}/engagement-model-sketch-1.jpg`,
-        imageOverlay: 'Engagement model sketch',
+        imagePath: '/images/lists%20ui%20sketch.jpg',
+        imageOverlay: 'UI sketch',
       },
     ],
   },
   {
-    heading: 'Approach',
-    paragraph: 'Describe how you tackled the work.',
+    heading: 'Modular Components',
+    paragraph: 'Patterns balancing consistency with context.',
     bulletPoints: [
       'Approach detail one.',
       'Approach detail two.',
@@ -69,37 +101,22 @@ export const cohesionKitContentData = [
         imageOverlay: 'Create dialog sizes',
       },
       {
-        imagePath: `${CK}/add-parameters-sizes.png`,
-        imageOverlay: 'Add parameters sizes',
-      },
-      {
-        imagePath: `${CK}/filter-and-search-anatomy.png`,
-        imageOverlay: 'Filter and search anatomy',
-        rowId: 'filter-search-pair',
-      },
-      {
-        imagePath: `${CK}/filter-and-search-sizes.png`,
-        imageOverlay: 'Filter and search sizes',
-        rowId: 'filter-search-pair',
+        imagePath: '/images/custom-fields-add-parameter.png',
+        imageOverlay: 'Custom fields: add parameter',
       },
     ],
   },
   {
-    heading: 'Results',
-    paragraph: 'Summarize outcomes and learnings.',
-    bulletPoints: [
-      'Result or outcome one.',
-      'Result or outcome two.',
-      'Result or outcome three.',
-    ],
+    heading: 'Partner engagement model',
+    paragraph: 'A repeatable process that sized my effort to partner importance.',
     images: [
       {
-        imagePath: `${CK}/Scale%20design%20with%20better%20visual%20storytelling.png`,
-        imageOverlay: 'Scale design with visual storytelling',
+        imagePath: '/images/lists%20final%20ui.png',
+        imageOverlay: 'Final UI',
       },
       {
-        imagePath: `${CK}/sketch-engagement-model-2.jpg`,
-        imageOverlay: 'Engagement model sketch',
+        imagePath: '/images/01%20platform/personas.png',
+        imageOverlay: 'Personas',
       },
     ],
   },

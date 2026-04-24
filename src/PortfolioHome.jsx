@@ -4,26 +4,26 @@ import './styles/PortfolioHome.css'
 const portfolioItems = [
   {
     id: 'data-platform-integration',
-    title: 'Data Platform Product Integration',
+    title: 'Data Platform Integration',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis diam feugiat, egestas nibh vitae, vulputate lacus.',
-    imagePath: '/images/dialog-simplification.png',
+      'Rationalizing platform architecture to drive product alignment.',
+    imagePath: '/images/01%20platform/personas.png',
     to: '/content'
   },
   {
     id: 'placeholder-one',
-    title: 'Lorem Ipsum One',
+    title: 'Cohesion Kit Pattern Library',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel dui sed velit viverra faucibus non vitae orci.',
-    imagePath: '/images/personas.png',
-    to: '/content'
+      'Balancing flexibility and standardization in a complex ecosystem.',
+    imagePath: '/images/02%20cohesion%20kit/create-dialog-sizes.png',
+    to: '/cohesion-kit'
   },
   {
     id: 'placeholder-two',
-    title: 'Lorem Ipsum Two',
+    title: 'Lorem Ipsum',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id magna id justo luctus volutpat vitae at mauris.',
-    imagePath: '/images/workshop%20whiteboard.png',
+    imagePath: '/images/01%20platform/workshop%20whiteboard.png',
     to: '/content'
   },
   {
@@ -31,7 +31,7 @@ const portfolioItems = [
     title: 'Lorem Ipsum Three',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo tortor nec malesuada cursus sed in nibh.',
-    imagePath: '/images/Existing%20dialog%20to%20new.png',
+    imagePath: '/images/dialog-simplification.png',
     to: '/content'
   }
 ]

@@ -2,13 +2,46 @@ import { Link } from 'react-router-dom'
 import './styles/ContentPage.css'
 import {
   cohesionKitContentData,
+  cohesionKitImageGallery,
   cohesionKitContentTags,
   cohesionKitSummaryColumns,
 } from './cohesionKitContentData'
 
 function CohesionKitPage() {
+  const finalEngagementModel = {
+    imagePath: '/images/02%20cohesion%20kit/final-engagement-model.png',
+    imageOverlay: 'Final',
+  }
+
+  const modularComponentImages = [
+    {
+      imagePath: '/images/02%20cohesion%20kit/filter-and-search-anatomy.png',
+      imageOverlay: 'Lorem Ipsum',
+    },
+    {
+      imagePath: '/images/02%20cohesion%20kit/filter-and-search-sizes.png',
+      imageOverlay: 'Lorem Ipsum',
+    },
+  ]
+
+  const modularComponentsRightImage = {
+    imagePath: '/images/02%20cohesion%20kit/create-dialog-sizes.png',
+    imageOverlay: 'Lorem Ipsum',
+  }
+
+  const engagementSketches = [
+    {
+      imagePath: '/images/02%20cohesion%20kit/engagement-model-sketch-2.jpg',
+      imageOverlay: null,
+    },
+    {
+      imagePath: '/images/02%20cohesion%20kit/engagement-model-sketch-1.jpg',
+      imageOverlay: 'Sketches',
+    },
+  ]
+
   return (
-    <div className="content-page">
+    <div className="content-page content-page--cohesion-kit">
       <Link to="/" className="content-back-link">
         ← Back to Portfolio
       </Link>
@@ -67,33 +100,73 @@ function CohesionKitPage() {
 
         <div className="content-column">
           {cohesionKitContentData.map((section, index) => (
-            <div key={index} className="content-section">
+            <div key={index} className="content-section content-section--full">
               <div className="content-text">
                 <h2>{section.heading}</h2>
                 <p>{section.paragraph}</p>
-                <ul className="content-list">
-                  {section.bulletPoints.map((point, pointIndex) => (
-                    <li key={pointIndex}>{point}</li>
-                  ))}
-                </ul>
               </div>
 
-              {section.images?.length ? (
+              {section.heading === 'Modular Components' ? (
                 <div className="content-image">
-                  <div className="content-image-stack">
-                    {section.images.map((img, imgIndex) => (
-                      <div key={imgIndex} className="content-image-wrap">
-                        <img src={img.imagePath} alt="" className="content-graphic" />
-                        {img.imageOverlay && (
+                  <div className="ck-modular-layout">
+                    <div className="ck-modular-left">
+                      {modularComponentImages.map((img, imgIndex) => (
+                        <div key={imgIndex} className="content-image-wrap">
+                          <img src={img.imagePath} alt="" className="content-graphic" />
                           <span className="content-image-overlay">{img.imageOverlay}</span>
-                        )}
-                      </div>
-                    ))}
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="content-image-wrap ck-modular-right">
+                      <img src={modularComponentsRightImage.imagePath} alt="" className="content-graphic" />
+                      <span className="content-image-overlay">{modularComponentsRightImage.imageOverlay}</span>
+                    </div>
+                  </div>
+                </div>
+              ) : null}
+
+              {section.heading === 'Partner engagement model' ? (
+                <div className="content-image">
+                  <div className="ck-engagement-layout">
+                    <div className="ck-engagement-sketches">
+                      {engagementSketches.map((img, imgIndex) => (
+                        <div key={imgIndex} className="content-image-wrap ck-engagement-sketch">
+                          <img src={img.imagePath} alt="" className="content-graphic ck-engagement-sketch-img" />
+                          {img.imageOverlay ? (
+                            <span className="content-image-overlay">{img.imageOverlay}</span>
+                          ) : null}
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="content-image-wrap ck-engagement-final">
+                      <img src={finalEngagementModel.imagePath} alt="" className="content-graphic ck-engagement-final-img" />
+                      <span className="content-image-overlay">{finalEngagementModel.imageOverlay}</span>
+                    </div>
                   </div>
                 </div>
               ) : null}
             </div>
           ))}
+
+          <div className="content-section content-section--full">
+            <div className="content-text">
+              <h2>Gallery</h2>
+              <p>Lorem Ipsum</p>
+            </div>
+
+            <div className="content-image">
+              <div className="content-image-stack">
+                {cohesionKitImageGallery.map((img, imgIndex) => (
+                  <div key={imgIndex} className="content-image-wrap">
+                    <img src={img.imagePath} alt="" className="content-graphic" />
+                    <span className="content-image-overlay">{img.imageOverlay}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

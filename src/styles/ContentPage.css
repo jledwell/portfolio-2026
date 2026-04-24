@@ -141,6 +141,10 @@
   z-index: 1;
 }
 
+.content-page--cohesion-kit .content-section {
+  margin-bottom: 3.75rem;
+}
+
 .content-section:last-child {
   margin-bottom: 0;
 }
@@ -155,6 +159,10 @@
   gap: 1.5rem;
   position: relative;
   z-index: 2;
+}
+
+.content-page--cohesion-kit .content-text {
+  gap: 0.9rem;
 }
 
 .content-text h2 {
@@ -314,6 +322,10 @@
   width: 100%;
 }
 
+.content-page--cohesion-kit .content-image-stack {
+  gap: 0.85rem;
+}
+
 .content-image-stack .content-image-wrap {
   width: 100%;
   max-width: none;
@@ -354,6 +366,83 @@
   width: 100%;
   max-width: none;
   height: 100%;
+}
+
+.content-graphic--row-fill {
+  object-fit: cover;
+  object-position: center;
+}
+
+.ck-engagement-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.content-page--cohesion-kit .ck-engagement-layout {
+  gap: 0.85rem;
+}
+
+.ck-engagement-sketches {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.content-page--cohesion-kit .ck-engagement-sketches {
+  gap: 0.85rem;
+}
+
+.ck-modular-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.ck-modular-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  min-width: 0;
+}
+
+.ck-modular-right {
+  width: 100%;
+  max-width: none;
+}
+
+@media (max-width: 768px) {
+  .ck-modular-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ck-engagement-sketch,
+.ck-engagement-final {
+  width: 100%;
+  max-width: none;
+}
+
+.ck-engagement-sketch {
+  height: 220px;
+}
+
+.ck-engagement-final {
+  height: 460px;
+}
+
+.ck-engagement-sketch-img,
+.ck-engagement-final-img {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .content-image-overlay {
@@ -420,6 +509,18 @@
 
   .content-image-row {
     grid-template-columns: 1fr;
+  }
+
+  .ck-engagement-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .ck-engagement-sketch {
+    height: 200px;
+  }
+
+  .ck-engagement-final {
+    height: 360px;
   }
 
   .content-page-title {
