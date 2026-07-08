@@ -17,29 +17,13 @@ const portfolioItems = [
       'Balancing flexibility and standardization in a complex ecosystem.',
     imagePath: '/images/02%20cohesion%20kit/create-dialog-sizes.png',
     to: '/cohesion-kit'
-  },
-  {
-    id: 'placeholder-two',
-    title: 'Lorem Ipsum',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id magna id justo luctus volutpat vitae at mauris.',
-    imagePath: '/images/01%20platform/workshop%20whiteboard.png',
-    to: '/content'
-  },
-  {
-    id: 'placeholder-three',
-    title: 'Lorem Ipsum Three',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo tortor nec malesuada cursus sed in nibh.',
-    imagePath: '/images/dialog-simplification.png',
-    to: '/content'
   }
 ]
 
 function PortfolioHome() {
   return (
     <main className="portfolio-home">
-      <h1 className="portfolio-home-title">Portfolio</h1>
+      <h1 className="portfolio-home-title">Portfolio - Joshua Ledwell</h1>
       <div className="portfolio-grid">
         {portfolioItems.map((item) => (
           <article key={item.id} className="portfolio-card">

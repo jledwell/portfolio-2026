@@ -7,13 +7,14 @@ export const cohesionKitSummaryColumns = [
   {
     heading: 'Goal',
     bulletPoints: [
-      'A standardized, cross-platform interface for managing data definitions.',
+      'A standardized, cross-platform experience for managing data definitions.',
     ],
   },
   {
     heading: 'Obstacles',
     bulletPoints: [
-      'Parameters Service partner data needs and customer contexts differed widely.',
+      'Partner data needs differed widely.',
+      'Designers did not want to use platform components.'
     ],
   },
   {
@@ -33,44 +34,13 @@ export const cohesionKitSummaryColumns = [
   },
 ]
 
-export const cohesionKitContentTags = ['Design', 'Systems', 'Placeholder']
-
-export const cohesionKitImageGallery = [
-  {
-    imagePath: `${CK}/Scale%20design%20with%20better%20visual%20storytelling.png`,
-    imageOverlay: 'Lorem Ipsum',
-  },
-  {
-    imagePath: `${CK}/create-dialog-sizes.png`,
-    imageOverlay: 'Lorem Ipsum',
-  },
-  {
-    imagePath: `${CK}/filter-and-search-anatomy.png`,
-    imageOverlay: 'Lorem Ipsum',
-  },
-  {
-    imagePath: `${CK}/filter-and-search-sizes.png`,
-    imageOverlay: 'Lorem Ipsum',
-  },
-  {
-    imagePath: `${CK}/final-engagement-model.png`,
-    imageOverlay: 'Lorem Ipsum',
-  },
-  {
-    imagePath: `${CK}/multiple-examples-illustrating-flexibility.png`,
-    imageOverlay: 'Lorem Ipsum',
-  },
-  {
-    imagePath: `${CK}/promote-component-reuse-with-patterns.png`,
-    imageOverlay: 'Lorem Ipsum',
-  },
-]
+export const cohesionKitContentTags = ['Design', 'Influencing', 'Systems']
 
 export const cohesionKitContentData = [
   {
-    heading: 'Challenges',
+    heading: 'Situation',
     paragraph:
-      'Introductory paragraph for Cohesion Kit. Replace with project context and framing.',
+      'A similar high-level workflow, each product with different data complexity.',
     bulletPoints: [
       'First challenge or insight bullet.',
       'Second challenge or insight bullet.',
@@ -78,12 +48,12 @@ export const cohesionKitContentData = [
     ],
     images: [
       {
-        imagePath: '/images/dialog-simplification.png',
-        imageOverlay: 'Dialog simplification',
+        imagePath: `${CK}/high-level-workflow-diagram.png`,
+        imageOverlay: 'High-level workflow',
       },
       {
-        imagePath: '/images/lists%20ui%20sketch.jpg',
-        imageOverlay: 'UI sketch',
+        imagePath: `${CK}/Complexity%20by%20partner.png`,
+        imageOverlay: 'Data complexity by product',
       },
     ],
   },
@@ -97,12 +67,16 @@ export const cohesionKitContentData = [
     ],
     images: [
       {
-        imagePath: `${CK}/create-dialog-sizes.png`,
-        imageOverlay: 'Create dialog sizes',
+        imagePath: `${CK}/filter-and-search-anatomy.png`,
+        imageOverlay: 'Lorem Ipsum',
       },
       {
-        imagePath: '/images/custom-fields-add-parameter.png',
-        imageOverlay: 'Custom fields: add parameter',
+        imagePath: `${CK}/filter-and-search-sizes.png`,
+        imageOverlay: 'Lorem Ipsum',
+      },
+      {
+        imagePath: `${CK}/create-dialog-sizes.png`,
+        imageOverlay: 'Lorem Ipsum',
       },
     ],
   },
@@ -111,12 +85,16 @@ export const cohesionKitContentData = [
     paragraph: 'A repeatable process that sized my effort to partner importance.',
     images: [
       {
-        imagePath: '/images/lists%20final%20ui.png',
-        imageOverlay: 'Final UI',
+        imagePath: `${CK}/engagement-model-sketch-2.jpg`,
+        imageOverlay: null,
       },
       {
-        imagePath: '/images/01%20platform/personas.png',
-        imageOverlay: 'Personas',
+        imagePath: `${CK}/engagement-model-sketch-1.jpg`,
+        imageOverlay: 'Sketches',
+      },
+      {
+        imagePath: `${CK}/final-engagement-model.png`,
+        imageOverlay: 'Final',
       },
     ],
   },

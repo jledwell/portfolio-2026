@@ -4,11 +4,11 @@ import { contentData, contentTags, summaryColumns } from './contentData'
 
 function ContentPage() {
   return (
-    <div className="content-page">
+    <div className="content-page content-page--data-platform">
       <Link to="/" className="content-back-link">
         ← Back to Portfolio
       </Link>
-      <h1 className="content-page-title">Data Platform Product Integration</h1>
+      <h1 className="content-page-title">Data Platform Integration</h1>
       <div className="content-page-tags">
         {contentTags.map((tag) => (
           <span key={tag} className="content-tag">{tag}</span>
@@ -61,7 +61,9 @@ function ContentPage() {
         <div className="content-column">
           {contentData.map((section, index) => {
             const sectionClasses =
-              section.heading === 'Situation'
+              section.heading === 'Discovery & Insights' ||
+              section.heading === 'Actions' ||
+              section.heading === 'Next Steps'
                 ? 'content-section content-section--full'
                 : 'content-section'
 
@@ -72,7 +74,7 @@ function ContentPage() {
               <div className="content-text">
                 <h2>{section.heading}</h2>
                 <p>{section.paragraph}</p>
-                {section.heading !== 'Action' && (
+                {section.heading !== 'Action' && section.bulletPoints?.length ? (
                   <ul
                     className={
                       section.heading === 'Situation' || section.heading === 'Results'
@@ -84,7 +86,7 @@ function ContentPage() {
                       <li key={pointIndex}>{point}</li>
                     ))}
                   </ul>
-                )}
+                ) : null}
               </div>
               {hasActionPhases ? (
                 <div className="action-phases-full">
@@ -115,7 +117,13 @@ function ContentPage() {
               ) : (section.imagePath ||
                   section.images?.length ||
                   (section.imageLabel && section.heading !== 'Situation')) ? (
-                <div className="content-image">
+                <div
+                  className={
+                    section.heading === 'Actions'
+                      ? 'content-image content-image--left'
+                      : 'content-image'
+                  }
+                >
                   {section.images?.length ? (
                     <div className="content-image-stack">
                       {(() => {
@@ -134,7 +142,14 @@ function ContentPage() {
                             }
 
                             imageItems.push(
-                              <div key={`${img.rowId}-${imgIndex}`} className="content-image-row">
+                              <div
+                                key={`${img.rowId}-${imgIndex}`}
+                                className={
+                                  img.rowId === 'add-parameter-pair'
+                                    ? 'content-image-row content-image-row--add-parameter'
+                                    : 'content-image-row'
+                                }
+                              >
                                 {rowImages.map((rowImg, rowImgIndex) => (
                                   <div key={rowImgIndex} className="content-image-wrap content-image-wrap--row">
                                     <img

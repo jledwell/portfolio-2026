@@ -9,6 +9,11 @@
   position: relative;
 }
 
+.content-page--data-platform {
+  padding-bottom: 2.5rem;
+  min-height: auto;
+}
+
 .content-back-link {
   position: fixed;
   top: 1rem;
@@ -145,6 +150,10 @@
   margin-bottom: 3.75rem;
 }
 
+.content-page--cohesion-kit .content-section.content-section--full {
+  gap: 1.5rem;
+}
+
 .content-section:last-child {
   margin-bottom: 0;
 }
@@ -153,12 +162,20 @@
   grid-template-columns: 1fr;
 }
 
+.content-page--data-platform .content-section.content-section--full {
+  gap: 0.9rem;
+}
+
 .content-text {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   position: relative;
   z-index: 2;
+}
+
+.content-page--data-platform .content-text {
+  gap: 1rem;
 }
 
 .content-page--cohesion-kit .content-text {
@@ -234,6 +251,10 @@
   justify-content: center;
   position: relative;
   z-index: 3;
+}
+
+.content-page--data-platform .content-image--left {
+  justify-content: flex-start;
 }
 
 .placeholder-graphic {
@@ -344,6 +365,10 @@
   width: 100%;
 }
 
+.content-image-row--add-parameter {
+  grid-template-columns: 1fr 2fr;
+}
+
 .content-image-wrap--row {
   width: 100%;
   height: 360px;
@@ -394,6 +419,10 @@
 
 .content-page--cohesion-kit .ck-engagement-sketches {
   gap: 0.85rem;
+}
+
+.content-page--cohesion-kit .ck-challenges-image {
+  justify-content: flex-start;
 }
 
 .ck-modular-layout {

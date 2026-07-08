@@ -2,12 +2,22 @@ import { Link } from 'react-router-dom'
 import './styles/ContentPage.css'
 import {
   cohesionKitContentData,
-  cohesionKitImageGallery,
   cohesionKitContentTags,
   cohesionKitSummaryColumns,
 } from './cohesionKitContentData'
 
 function CohesionKitPage() {
+  const situationImages = [
+    {
+      imagePath: '/images/02%20cohesion%20kit/high-level-workflow-diagram.png',
+      imageOverlay: 'High-level workflow',
+    },
+    {
+      imagePath: '/images/02%20cohesion%20kit/Complexity%20by%20partner.png',
+      imageOverlay: 'Data complexity by product',
+    },
+  ]
+
   const finalEngagementModel = {
     imagePath: '/images/02%20cohesion%20kit/final-engagement-model.png',
     imageOverlay: 'Final',
@@ -106,6 +116,21 @@ function CohesionKitPage() {
                 <p>{section.paragraph}</p>
               </div>
 
+              {section.heading === 'Situation' ? (
+                <div className="content-image ck-challenges-image">
+                  <div className="content-image-stack">
+                    {situationImages.map((img, imgIndex) => (
+                      <div key={imgIndex} className="content-image-wrap">
+                        <img src={img.imagePath} alt="" className="content-graphic" />
+                        {img.imageOverlay ? (
+                          <span className="content-image-overlay">{img.imageOverlay}</span>
+                        ) : null}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
+
               {section.heading === 'Modular Components' ? (
                 <div className="content-image">
                   <div className="ck-modular-layout">
@@ -149,24 +174,6 @@ function CohesionKitPage() {
               ) : null}
             </div>
           ))}
-
-          <div className="content-section content-section--full">
-            <div className="content-text">
-              <h2>Gallery</h2>
-              <p>Lorem Ipsum</p>
-            </div>
-
-            <div className="content-image">
-              <div className="content-image-stack">
-                {cohesionKitImageGallery.map((img, imgIndex) => (
-                  <div key={imgIndex} className="content-image-wrap">
-                    <img src={img.imagePath} alt="" className="content-graphic" />
-                    <span className="content-image-overlay">{img.imageOverlay}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
