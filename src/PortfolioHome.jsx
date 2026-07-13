@@ -7,7 +7,7 @@ const portfolioItems = [
     title: 'Data Platform Integration',
     description:
       'Rationalizing platform architecture to drive product alignment.',
-    imagePath: '/images/01%20platform/personas.png',
+    imagePath: `${import.meta.env.BASE_URL}images/01%20platform/personas.png`,
     to: '/content'
   },
   {
@@ -15,7 +15,7 @@ const portfolioItems = [
     title: 'Cohesion Kit Pattern Library',
     description:
       'Balancing flexibility and standardization in a complex ecosystem.',
-    imagePath: '/images/02%20cohesion%20kit/create-dialog-sizes.png',
+    imagePath: `${import.meta.env.BASE_URL}images/02%20cohesion%20kit/create-dialog-sizes.png`,
     to: '/cohesion-kit'
   }
 ]

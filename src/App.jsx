@@ -6,7 +6,7 @@ import './styles/App.css'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <div className="App">
         <Routes>
           <Route path="/" element={<PortfolioHome />} />
