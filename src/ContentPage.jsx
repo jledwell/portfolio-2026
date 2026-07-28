@@ -1,8 +1,13 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './styles/ContentPage.css'
 import { contentData, contentTags, summaryColumns } from './contentData'
 
 function ContentPage() {
+  useEffect(() => {
+    document.title = 'Data Platform Integration'
+  }, [])
+
   return (
     <div className="content-page content-page--data-platform">
       <Link to="/" className="content-back-link">

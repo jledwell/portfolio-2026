@@ -126,6 +126,19 @@
   margin-bottom: 0;
 }
 
+.content-page--parameters-service-discovery .content-summary-col + .content-summary-col {
+  border-left: 1px solid #d0d0d0;
+  padding-left: 1.25rem;
+}
+
+.content-page--parameters-service-discovery .content-list--situation {
+  columns: 1;
+}
+
+.content-page--parameters-service-discovery .content-summary-list li {
+  margin-bottom: 0.85rem;
+}
+
 .content-tag {
   font-family: 'Raleway', sans-serif;
   font-size: 0.75rem;
@@ -524,6 +537,11 @@
     grid-template-columns: 1fr;
     gap: 1.25rem;
     margin-bottom: 2rem;
+  }
+
+  .content-page--parameters-service-discovery .content-summary-col + .content-summary-col {
+    border-left: none;
+    padding-left: 0;
   }
 
   .content-section {

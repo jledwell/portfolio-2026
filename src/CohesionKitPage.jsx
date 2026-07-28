@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './styles/ContentPage.css'
 import {
@@ -9,6 +10,10 @@ import {
 const IMG = `${import.meta.env.BASE_URL}images`
 
 function CohesionKitPage() {
+  useEffect(() => {
+    document.title = 'Cohesion Kit'
+  }, [])
+
   const situationImages = [
     {
       imagePath: `${IMG}/02%20cohesion%20kit/high-level-workflow-diagram.png`,
