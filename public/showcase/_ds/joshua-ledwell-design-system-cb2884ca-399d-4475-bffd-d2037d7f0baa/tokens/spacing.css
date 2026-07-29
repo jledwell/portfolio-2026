@@ -1,0 +1,46 @@
+/* ============================================================
+   Spacing, radii & shadows — Joshua Ledwell personal brand
+   Generous white space; soft rounded corners; subtle shadows.
+   ============================================================ */
+
+:root {
+  /* Spacing scale (matches the Tailwind-derived rhythm of the brand) */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;  /* small gap — related elements */
+  --space-5:  20px;
+  --space-6:  24px;  /* medium gap — between cards */
+  --space-8:  32px;  /* card padding */
+  --space-10: 40px;
+  --space-12: 48px;  /* large gap — between sections */
+  --space-16: 64px;
+  --space-20: 80px;  /* section vertical padding */
+
+  /* Layout */
+  --container-max: 1280px;
+  --container-pad: 24px;      /* px-6 mobile */
+  --container-pad-lg: 32px;   /* lg:px-8 */
+
+  /* Radii */
+  --radius-sm:   8px;
+  --radius-md:   10px;
+  --radius-lg:   12px;  /* rounded-xl — cards, buttons */
+  --radius-xl:   16px;  /* rounded-2xl — large panels */
+  --radius-full: 9999px; /* pills, badges, avatars */
+
+  /* Borders */
+  --border-width: 1px;
+  --border-width-strong: 2px; /* brand-accented edges (logo, badges) */
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(44, 37, 32, 0.05);
+  --shadow-md: 0 4px 12px rgba(44, 37, 32, 0.08);
+  --shadow-lg: 0 10px 30px rgba(44, 37, 32, 0.12);
+  --shadow-pill: 0 4px 4px rgba(0, 0, 0, 0.25); /* nametag pill (from Figma) */
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1); /* @kind other */
+  --duration-fast: 0.2s; /* @kind other */
+  --duration-base: 0.3s; /* @kind other */
+}

@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './styles/ContentPage.css'
 import {
@@ -6,46 +7,52 @@ import {
   cohesionKitSummaryColumns,
 } from './cohesionKitContentData'
 
+const IMG = `${import.meta.env.BASE_URL}images`
+
 function CohesionKitPage() {
+  useEffect(() => {
+    document.title = 'Cohesion Kit'
+  }, [])
+
   const situationImages = [
     {
-      imagePath: '/images/02%20cohesion%20kit/high-level-workflow-diagram.png',
+      imagePath: `${IMG}/02%20cohesion%20kit/high-level-workflow-diagram.png`,
       imageOverlay: 'High-level workflow',
     },
     {
-      imagePath: '/images/02%20cohesion%20kit/Complexity%20by%20partner.png',
+      imagePath: `${IMG}/02%20cohesion%20kit/Complexity%20by%20partner.png`,
       imageOverlay: 'Data complexity by product',
     },
   ]
 
   const finalEngagementModel = {
-    imagePath: '/images/02%20cohesion%20kit/final-engagement-model.png',
+    imagePath: `${IMG}/02%20cohesion%20kit/final-engagement-model.png`,
     imageOverlay: 'Final',
   }
 
   const modularComponentImages = [
     {
-      imagePath: '/images/02%20cohesion%20kit/filter-and-search-anatomy.png',
+      imagePath: `${IMG}/02%20cohesion%20kit/filter-and-search-anatomy.png`,
       imageOverlay: 'Lorem Ipsum',
     },
     {
-      imagePath: '/images/02%20cohesion%20kit/filter-and-search-sizes.png',
+      imagePath: `${IMG}/02%20cohesion%20kit/filter-and-search-sizes.png`,
       imageOverlay: 'Lorem Ipsum',
     },
   ]
 
   const modularComponentsRightImage = {
-    imagePath: '/images/02%20cohesion%20kit/create-dialog-sizes.png',
+    imagePath: `${IMG}/02%20cohesion%20kit/create-dialog-sizes.png`,
     imageOverlay: 'Lorem Ipsum',
   }
 
   const engagementSketches = [
     {
-      imagePath: '/images/02%20cohesion%20kit/engagement-model-sketch-2.jpg',
+      imagePath: `${IMG}/02%20cohesion%20kit/engagement-model-sketch-2.jpg`,
       imageOverlay: null,
     },
     {
-      imagePath: '/images/02%20cohesion%20kit/engagement-model-sketch-1.jpg',
+      imagePath: `${IMG}/02%20cohesion%20kit/engagement-model-sketch-1.jpg`,
       imageOverlay: 'Sketches',
     },
   ]

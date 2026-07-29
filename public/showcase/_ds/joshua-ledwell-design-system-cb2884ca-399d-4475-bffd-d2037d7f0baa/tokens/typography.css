@@ -1,0 +1,40 @@
+/* ============================================================
+   Typography scale — Joshua Ledwell personal brand
+   Display & headings: Arvo (slab serif)
+   Body & UI: Atkinson Hyperlegible
+   ============================================================ */
+
+:root {
+  /* Font sizes (px) */
+  --text-display: 56px; /* hero / H1 */
+  --text-h2:      32px; /* section headings */
+  --text-h3:      24px; /* subsection / card titles */
+  --text-lg:      18px; /* lead / large body */
+  --text-base:    16px; /* standard body */
+  --text-sm:      14px; /* captions, supporting */
+  --text-xs:      12px; /* overlines, labels */
+
+  /* Line heights */
+  --leading-display: 1.1;
+  --leading-heading: 1.2;
+  --leading-body:    1.7;  /* generous, readable */
+  --leading-tight:   1.3;
+
+  /* Letter spacing */
+  --tracking-display: -0.02em; /* H1 */
+  --tracking-h2:      -0.01em;
+  --tracking-normal:  0;
+  --tracking-label:   0.1em;   /* uppercase overlines */
+  --tracking-badge:   0.025em;
+
+  /* ---- Semantic type roles ---- */
+  --type-display-family: var(--font-heading);
+  --type-display-size:   var(--text-display);
+  --type-display-weight: var(--weight-regular);
+
+  --type-body-family:    var(--font-body);
+  --type-body-size:      var(--text-base);
+  --type-body-weight:    var(--weight-regular);
+
+  --type-label-weight:   var(--weight-semibold);
+}

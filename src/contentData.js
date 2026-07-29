@@ -40,6 +40,8 @@ export const summaryColumns = [
 
 export const contentTags = ['Influencing', 'Platform', 'Research', 'Strategy']
 
+const IMG = `${import.meta.env.BASE_URL}images`
+
 export const contentData = [
   {
     // Discovery & Insights section
@@ -48,12 +50,12 @@ export const contentData = [
     imageLabel: 'Obstacles Graphic',
     images: [
       {
-        imagePath: '/images/01%20platform/personas.png',
+        imagePath: `${IMG}/01%20platform/personas.png`,
         imageOverlay: 'Personas',
         rowId: 'discovery-insights-pair'
       },
       {
-        imagePath: '/images/01%20platform/workshop%20whiteboard.png',
+        imagePath: `${IMG}/01%20platform/workshop%20whiteboard.png`,
         imageOverlay: 'Workshop whiteboard',
         rowId: 'discovery-insights-pair'
       }
@@ -66,26 +68,26 @@ export const contentData = [
     imageLabel: 'Action Graphic',
     images: [
       {
-        imagePath: '/images/dialog-simplification.png',
+        imagePath: `${IMG}/dialog-simplification.png`,
         imageOverlay: 'Simplifying for customer context'
       },
       {
-        imagePath: '/images/01%20platform/original-add-parameter.jpg',
+        imagePath: `${IMG}/01%20platform/original-add-parameter.jpg`,
         imageOverlay: 'Original add parameter',
         rowId: 'add-parameter-pair'
       },
       {
-        imagePath: '/images/custom-fields-add-parameter.png',
+        imagePath: `${IMG}/custom-fields-add-parameter.png`,
         imageOverlay: 'Data columns and features simplified',
         rowId: 'add-parameter-pair'
       },
       {
-        imagePath: '/images/lists%20ui%20sketch.jpg',
+        imagePath: `${IMG}/lists%20ui%20sketch.jpg`,
         imageOverlay: 'List UI sketch',
         rowId: 'lists-ui-pair'
       },
       {
-        imagePath: '/images/lists%20final%20ui.png',
+        imagePath: `${IMG}/lists%20final%20ui.png`,
         imageOverlay: 'List final UI',
         rowId: 'lists-ui-pair'
       }

@@ -1,0 +1,21 @@
+/* ============================================================
+   Fonts — Joshua Ledwell personal brand
+   Heading: Arvo (slab serif) · Body: Atkinson Hyperlegible
+   Both are served from Google Fonts. If you need self-hosted
+   binaries, drop them in assets/fonts/ and replace the @import
+   with @font-face rules.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  /* Family stacks */
+  --font-heading: 'Arvo', 'Rockwell', Georgia, serif;
+  --font-body: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  /* Weights */
+  --weight-regular: 400;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+}

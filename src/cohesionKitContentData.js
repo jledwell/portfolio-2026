@@ -1,7 +1,7 @@
 // Content for CohesionKitPage — same shape as contentData.js for ContentPage.
 // Images live in public/images/02 cohesion kit/ (spaces encoded as %20 in URLs).
 
-const CK = '/images/02%20cohesion%20kit'
+const CK = `${import.meta.env.BASE_URL}images/02%20cohesion%20kit`
 
 export const cohesionKitSummaryColumns = [
   {

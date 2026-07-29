@@ -1,0 +1,43 @@
+/* ============================================================
+   Component interaction states — Joshua Ledwell personal brand
+   Hover / active / focus that inline styles can't express.
+   Class names are emitted by the React components.
+   ============================================================ */
+
+/* ---- Button ---- */
+.jl-btn {
+  outline: none;
+}
+.jl-btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(212, 112, 77, 0.35);
+}
+.jl-btn--primary:hover { box-shadow: var(--shadow-lg); filter: brightness(0.97); }
+.jl-btn--secondary:hover { box-shadow: var(--shadow-lg); filter: brightness(0.97); }
+.jl-btn--outline:hover { background-color: var(--warm-sand); }
+.jl-btn--ghost:hover { background-color: var(--warm-sand); }
+.jl-btn:active { transform: translateY(1px); }
+.jl-btn:disabled { opacity: 0.5; pointer-events: none; }
+
+/* ---- Card ---- */
+.jl-card--interactive { cursor: pointer; }
+.jl-card--interactive:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* ---- Input ---- */
+.jl-input:focus {
+  outline: none;
+  border-color: var(--warm-terracotta);
+  box-shadow: 0 0 0 3px rgba(212, 112, 77, 0.15);
+}
+.jl-input::placeholder { color: var(--text-muted); opacity: 0.7; }
+
+/* ---- Icon button / social chip ---- */
+.jl-iconbtn {
+  transition: all var(--duration-base) var(--ease-standard);
+}
+.jl-iconbtn:hover { box-shadow: var(--shadow-md); }
+
+/* ---- Link with underline-on-hover ---- */
+.jl-link:hover { text-decoration: underline; }

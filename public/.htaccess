@@ -1,0 +1,8 @@
+# Serve real files/directories as-is (images, /showcase/*.html, assets),
+# and route everything else to the React app for client-side routing.
+# Site lives at https://uxworkflow.com/portfolio-2026/
+RewriteEngine On
+RewriteBase /portfolio-2026/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /portfolio-2026/index.html [L]

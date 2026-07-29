@@ -1,0 +1,54 @@
+/* ============================================================
+   Colors — Joshua Ledwell personal brand
+   Warm earth tones (terracotta / coral / sand) paired with a
+   calm green family (sage / forest / mint) on a soft off-white.
+   ============================================================ */
+
+:root {
+  /* ---- Brand: warm ---- */
+  --warm-terracotta: #d4704d; /* primary accent, CTAs, emphasis */
+  --warm-coral:      #e89a7f; /* secondary warm accent */
+  --warm-sand:       #f5ede4; /* warm tint backgrounds */
+
+  /* ---- Brand: green ---- */
+  --green-sage:   #7a9d7e; /* secondary brand, growth */
+  --green-forest: #4a6b4e; /* deep authority green */
+  --green-mint:   #c8dcc8; /* light green surfaces */
+
+  /* ---- Neutrals ---- */
+  --neutral-dark:   #2c2520; /* headings, primary text (dark brown) */
+  --neutral-medium: #6b5d52; /* body / secondary text (medium brown) */
+  --neutral-light:  #e8e5e1; /* borders, dividers (light gray) */
+  --off-white:      #fdfbf7; /* page background */
+  --white:          #ffffff; /* cards, sections */
+
+  /* ---- Semantic aliases ---- */
+  --bg-page:        var(--off-white);
+  --surface-card:   var(--white);
+  --surface-tint:   var(--warm-sand);   /* warm tinted panels */
+  --surface-green:  var(--green-mint);  /* green tinted panels */
+
+  --text-heading:   var(--neutral-dark);
+  --text-body:      var(--neutral-dark);
+  --text-muted:     var(--neutral-medium);
+  --text-on-accent: var(--white);
+
+  --accent-primary:   var(--warm-terracotta);
+  --accent-secondary: var(--green-sage);
+
+  --border-default: var(--neutral-light);
+  --border-strong:  rgba(0, 0, 0, 0.1);
+
+  /* Badge / pill tints (very low-opacity brand washes) */
+  --tint-mint:      rgba(200, 220, 200, 0.08);
+  --tint-sand:      rgba(245, 237, 228, 0.6);
+
+  /* Status / feedback (from Figma brand icon palette) */
+  --status-info:    #0696d7; /* cloud blue */
+  --status-warning: #faa21b; /* amber */
+  --status-success: #87bc40; /* lime green */
+  --status-error:   #ec4a41; /* alert red */
+
+  /* Focus ring */
+  --ring: var(--warm-terracotta);
+}
