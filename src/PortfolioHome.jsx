@@ -8,8 +8,7 @@ const portfolioItems = [
     title: 'Discovery to Outcomes: Parameters Service',
     description:
       'User-centered design, Exploration, Advocacy & storytelling, Systems thinking, User & business insights.',
-    // Temporary stand-in until final art is ready
-    imagePath: `${import.meta.env.BASE_URL}images/01%20platform/workshop%20whiteboard.png`,
+    imagePath: `${import.meta.env.BASE_URL}images/03%20parameters%20service%20discovery/User%20Research%20Discovery%20Flow.png`,
     to: '/parameters-service-discovery',
   },
   {

@@ -51,12 +51,12 @@ export const contentData = [
     images: [
       {
         imagePath: `${IMG}/01%20platform/personas.png`,
-        imageOverlay: 'Personas',
+        imageCaption: 'Personas',
         rowId: 'discovery-insights-pair'
       },
       {
         imagePath: `${IMG}/01%20platform/workshop%20whiteboard.png`,
-        imageOverlay: 'Workshop whiteboard',
+        imageCaption: 'Workshop whiteboard',
         rowId: 'discovery-insights-pair'
       }
     ]
@@ -69,26 +69,26 @@ export const contentData = [
     images: [
       {
         imagePath: `${IMG}/dialog-simplification.png`,
-        imageOverlay: 'Simplifying for customer context'
+        imageCaption: 'Simplifying for customer context'
       },
       {
         imagePath: `${IMG}/01%20platform/original-add-parameter.jpg`,
-        imageOverlay: 'Original add parameter',
+        imageCaption: 'Original add parameter',
         rowId: 'add-parameter-pair'
       },
       {
         imagePath: `${IMG}/custom-fields-add-parameter.png`,
-        imageOverlay: 'Data columns and features simplified',
+        imageCaption: 'Data columns and features simplified',
         rowId: 'add-parameter-pair'
       },
       {
         imagePath: `${IMG}/lists%20ui%20sketch.jpg`,
-        imageOverlay: 'List UI sketch',
+        imageCaption: 'List UI sketch',
         rowId: 'lists-ui-pair'
       },
       {
         imagePath: `${IMG}/lists%20final%20ui.png`,
-        imageOverlay: 'List final UI',
+        imageCaption: 'List final UI',
         rowId: 'lists-ui-pair'
       }
     ],

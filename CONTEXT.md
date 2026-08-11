@@ -49,7 +49,7 @@ Main vertical case-study sections array. Typical fields:
 - `paragraph`
 - `bulletPoints`
 - `imageLabel`
-- `imagePath` / `imageOverlay`
+- `imagePath` / `imageCaption`
 - `images` (array of image objects)
 - `actionPhases` (for Action 2x2 phase grid)
 

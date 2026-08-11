@@ -49,11 +49,11 @@ export const cohesionKitContentData = [
     images: [
       {
         imagePath: `${CK}/high-level-workflow-diagram.png`,
-        imageOverlay: 'High-level workflow',
+        imageCaption: 'High-level workflow',
       },
       {
         imagePath: `${CK}/Complexity%20by%20partner.png`,
-        imageOverlay: 'Data complexity by product',
+        imageCaption: 'Data complexity by product',
       },
     ],
   },
@@ -68,15 +68,15 @@ export const cohesionKitContentData = [
     images: [
       {
         imagePath: `${CK}/filter-and-search-anatomy.png`,
-        imageOverlay: 'Lorem Ipsum',
+        imageCaption: 'Lorem Ipsum',
       },
       {
         imagePath: `${CK}/filter-and-search-sizes.png`,
-        imageOverlay: 'Lorem Ipsum',
+        imageCaption: 'Lorem Ipsum',
       },
       {
         imagePath: `${CK}/create-dialog-sizes.png`,
-        imageOverlay: 'Lorem Ipsum',
+        imageCaption: 'Lorem Ipsum',
       },
     ],
   },
@@ -86,15 +86,15 @@ export const cohesionKitContentData = [
     images: [
       {
         imagePath: `${CK}/engagement-model-sketch-2.jpg`,
-        imageOverlay: null,
+        imageCaption: null,
       },
       {
         imagePath: `${CK}/engagement-model-sketch-1.jpg`,
-        imageOverlay: 'Sketches',
+        imageCaption: 'Sketches',
       },
       {
         imagePath: `${CK}/final-engagement-model.png`,
-        imageOverlay: 'Final',
+        imageCaption: 'Final',
       },
     ],
   },

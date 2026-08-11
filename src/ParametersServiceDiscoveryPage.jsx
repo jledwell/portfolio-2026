@@ -1,23 +1,121 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './styles/ContentPage.css'
+import ImageCaption from './ImageCaption'
 import {
   parametersServiceDiscoveryContentData,
   parametersServiceDiscoveryContentTags,
-  parametersServiceDiscoverySummaryColumns,
 } from './parametersServiceDiscoveryContentData'
+
+const SIDE_BY_SIDE_HEADINGS = new Set(['Results', 'Detailed Outcomes'])
+
+function SectionText({ section }) {
+  const paragraphs = section.paragraphs?.length
+    ? section.paragraphs
+    : section.paragraph
+      ? [section.paragraph]
+      : []
+
+  return (
+    <div className="content-text">
+      <h2>{section.heading}</h2>
+      {paragraphs.map((text, paragraphIndex) => (
+        <p key={paragraphIndex}>{text}</p>
+      ))}
+      {section.bulletPoints?.length ? (
+        <ul
+          className={
+            section.heading === 'Situation' || section.heading === 'Results'
+              ? 'content-list content-list--situation'
+              : 'content-list'
+          }
+        >
+          {section.bulletPoints.map((point, pointIndex) => (
+            <li key={pointIndex}>{point}</li>
+          ))}
+        </ul>
+      ) : null}
+    </div>
+  )
+}
+
+function SectionMedia({ section }) {
+  if (section.pullQuote) {
+    return (
+      <div className="content-image content-image--pull-quote">
+        <blockquote className="content-pull-quote">
+          <p>{section.pullQuote}</p>
+        </blockquote>
+      </div>
+    )
+  }
+
+  if (!section.imagePath && !section.imageLabel) return null
+
+  const image = (
+    <img src={section.imagePath} alt="" className="content-graphic" />
+  )
+
+  return (
+    <div className="content-image">
+      {section.imagePath ? (
+        <figure className="content-image-wrap">
+          {section.browserFrame ? (
+            <div className="browser-frame">
+              <div className="browser-frame-chrome" aria-hidden="true">
+                <div className="browser-frame-dots">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                <div className="browser-frame-url">
+                  <span className="browser-frame-url-text">
+                    {section.browserUrl || 'example.com'}
+                  </span>
+                </div>
+              </div>
+              <div className="browser-frame-viewport">{image}</div>
+            </div>
+          ) : (
+            image
+          )}
+          <ImageCaption caption={section.imageCaption} />
+        </figure>
+      ) : (
+        <div className="placeholder-graphic">{section.imageLabel}</div>
+      )}
+    </div>
+  )
+}
 
 function ParametersServiceDiscoveryPage() {
   useEffect(() => {
     document.title = 'Discovery to Outcomes: Parameters Service'
   }, [])
 
+  const contentBlocks = []
+  for (let i = 0; i < parametersServiceDiscoveryContentData.length; i++) {
+    const section = parametersServiceDiscoveryContentData[i]
+    const next = parametersServiceDiscoveryContentData[i + 1]
+    if (
+      section.heading === 'Results' &&
+      next?.heading === 'Detailed Outcomes'
+    ) {
+      contentBlocks.push({ type: 'pair', sections: [section, next] })
+      i += 1
+    } else {
+      contentBlocks.push({ type: 'section', section })
+    }
+  }
+
   return (
     <div className="content-page content-page--parameters-service-discovery">
       <Link to="/" className="content-back-link">
         ← Back to Portfolio
       </Link>
-      <h1 className="content-page-title">Discovery to Outcomes: Parameters Service</h1>
+      <h1 className="content-page-title">
+        Discovery to Outcomes: Parameters Service
+      </h1>
       <div className="content-page-tags">
         {parametersServiceDiscoveryContentTags.map((tag) => (
           <span key={tag} className="content-tag">
@@ -25,116 +123,42 @@ function ParametersServiceDiscoveryPage() {
           </span>
         ))}
       </div>
-      <div className="content-summary-grid">
-        {parametersServiceDiscoverySummaryColumns.map((column) => (
-          <div key={column.heading} className="content-summary-col">
-            <h3 className="content-summary-heading">{column.heading}</h3>
-            {column.bulletPoints?.length ? (
-              <ul className="content-summary-list">
-                {column.bulletPoints.map((point, pointIndex) => (
-                  <li key={pointIndex}>{point}</li>
-                ))}
-              </ul>
-            ) : (
-              <p className="content-summary-text">{column.text}</p>
-            )}
-          </div>
-        ))}
-      </div>
-      <div className="content-with-line">
-        <div className="line-column">
-          <div className="map-pin-container">
-            <svg
-              className="map-pin-icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-                fill="#888888"
-              />
-            </svg>
-          </div>
-          <svg
-            className="winding-line"
-            width="64"
-            height="100%"
-            viewBox="0 0 64 5000"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M 32 0 
-                 Q 40 120, 32 320
-                 Q 24 440, 32 640
-                 Q 40 840, 32 1040
-                 Q 24 1240, 32 1440
-                 Q 40 1640, 32 1840
-                 Q 24 2040, 32 2240
-                 Q 40 2440, 32 2640
-                 Q 24 2840, 32 3040"
-              fill="none"
-              stroke="#d0d0d0"
-              strokeWidth="12"
-              strokeDasharray="25 20"
-              strokeLinecap="round"
-              vectorEffect="non-scaling-stroke"
-            />
-            <circle cx="32" cy="3040" r="6" fill="#d0d0d0" />
-          </svg>
-        </div>
-        <div className="content-column">
-          {parametersServiceDiscoveryContentData.map((section, index) => {
-            const sectionClasses =
+      {/* Summary grid (Goals → Outcomes) hidden; data kept in parametersServiceDiscoverySummaryColumns */}
+      <div className="content-column">
+        {contentBlocks.map((block, index) => {
+            if (block.type === 'pair') {
+              return (
+                <div key={index} className="content-section-pair">
+                  {block.sections.map((section) => (
+                    <SectionText key={section.heading} section={section} />
+                  ))}
+                </div>
+              )
+            }
+
+            const { section } = block
+            const isFull =
+              section.heading === 'Analysis' ||
               section.heading === 'Discovery & Insights' ||
               section.heading === 'Actions' ||
-              section.heading === 'Next Steps'
-                ? 'content-section content-section--full'
-                : 'content-section'
+              section.heading === 'Next Steps' ||
+              SIDE_BY_SIDE_HEADINGS.has(section.heading) ||
+              (!section.imagePath && !section.imageLabel && !section.pullQuote)
 
             return (
-              <div key={index} className={sectionClasses}>
-                <div className="content-text">
-                  <h2>{section.heading}</h2>
-                  <p>{section.paragraph}</p>
-                  {section.bulletPoints?.length ? (
-                    <ul
-                      className={
-                        section.heading === 'Situation' || section.heading === 'Results'
-                          ? 'content-list content-list--situation'
-                          : 'content-list'
-                      }
-                    >
-                      {section.bulletPoints.map((point, pointIndex) => (
-                        <li key={pointIndex}>{point}</li>
-                      ))}
-                    </ul>
-                  ) : null}
-                </div>
-                {section.imagePath || section.imageLabel ? (
-                  <div className="content-image">
-                    {section.imagePath ? (
-                      <div className="content-image-wrap">
-                        <img
-                          src={section.imagePath}
-                          alt=""
-                          className="content-graphic"
-                        />
-                        {section.imageOverlay ? (
-                          <span className="content-image-overlay">
-                            {section.imageOverlay}
-                          </span>
-                        ) : null}
-                      </div>
-                    ) : (
-                      <div className="placeholder-graphic">{section.imageLabel}</div>
-                    )}
-                  </div>
-                ) : null}
+              <div
+                key={index}
+                className={
+                  isFull
+                    ? 'content-section content-section--full'
+                    : 'content-section'
+                }
+              >
+                <SectionText section={section} />
+                <SectionMedia section={section} />
               </div>
             )
           })}
-        </div>
       </div>
     </div>
   )

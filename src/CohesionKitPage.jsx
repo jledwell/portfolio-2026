@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './styles/ContentPage.css'
+import ImageCaption from './ImageCaption'
 import {
   cohesionKitContentData,
   cohesionKitContentTags,
@@ -17,43 +18,43 @@ function CohesionKitPage() {
   const situationImages = [
     {
       imagePath: `${IMG}/02%20cohesion%20kit/high-level-workflow-diagram.png`,
-      imageOverlay: 'High-level workflow',
+      imageCaption: 'High-level workflow',
     },
     {
       imagePath: `${IMG}/02%20cohesion%20kit/Complexity%20by%20partner.png`,
-      imageOverlay: 'Data complexity by product',
+      imageCaption: 'Data complexity by product',
     },
   ]
 
   const finalEngagementModel = {
     imagePath: `${IMG}/02%20cohesion%20kit/final-engagement-model.png`,
-    imageOverlay: 'Final',
+    imageCaption: 'Final',
   }
 
   const modularComponentImages = [
     {
       imagePath: `${IMG}/02%20cohesion%20kit/filter-and-search-anatomy.png`,
-      imageOverlay: 'Lorem Ipsum',
+      imageCaption: 'Lorem Ipsum',
     },
     {
       imagePath: `${IMG}/02%20cohesion%20kit/filter-and-search-sizes.png`,
-      imageOverlay: 'Lorem Ipsum',
+      imageCaption: 'Lorem Ipsum',
     },
   ]
 
   const modularComponentsRightImage = {
     imagePath: `${IMG}/02%20cohesion%20kit/create-dialog-sizes.png`,
-    imageOverlay: 'Lorem Ipsum',
+    imageCaption: 'Lorem Ipsum',
   }
 
   const engagementSketches = [
     {
       imagePath: `${IMG}/02%20cohesion%20kit/engagement-model-sketch-2.jpg`,
-      imageOverlay: null,
+      imageCaption: null,
     },
     {
       imagePath: `${IMG}/02%20cohesion%20kit/engagement-model-sketch-1.jpg`,
-      imageOverlay: 'Sketches',
+      imageCaption: 'Sketches',
     },
   ]
 
@@ -62,7 +63,9 @@ function CohesionKitPage() {
       <Link to="/" className="content-back-link">
         ← Back to Portfolio
       </Link>
-      <h1 className="content-page-title">Cohesion Kit</h1>
+      <h1 className="content-page-title">
+        Cohesion Kit
+      </h1>
       <div className="content-page-tags">
         {cohesionKitContentTags.map((tag) => (
           <span key={tag} className="content-tag">{tag}</span>
@@ -86,36 +89,7 @@ function CohesionKitPage() {
         ))}
       </div>
 
-      <div className="content-with-line">
-        <div className="line-column">
-          <div className="map-pin-container">
-            <svg className="map-pin-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#888888"/>
-            </svg>
-          </div>
-          <svg className="winding-line" width="64" height="100%" viewBox="0 0 64 5000" preserveAspectRatio="none">
-            <path
-              d="M 32 0 
-                 Q 40 120, 32 320
-                 Q 24 440, 32 640
-                 Q 40 840, 32 1040
-                 Q 24 1240, 32 1440
-                 Q 40 1640, 32 1840
-                 Q 24 2040, 32 2240
-                 Q 40 2440, 32 2640
-                 Q 24 2840, 32 3040"
-              fill="none"
-              stroke="#d0d0d0"
-              strokeWidth="12"
-              strokeDasharray="25 20"
-              strokeLinecap="round"
-              vectorEffect="non-scaling-stroke"
-            />
-            <circle cx="32" cy="3040" r="6" fill="#d0d0d0" />
-          </svg>
-        </div>
-
-        <div className="content-column">
+      <div className="content-column">
           {cohesionKitContentData.map((section, index) => (
             <div key={index} className="content-section content-section--full">
               <div className="content-text">
@@ -127,12 +101,10 @@ function CohesionKitPage() {
                 <div className="content-image ck-challenges-image">
                   <div className="content-image-stack">
                     {situationImages.map((img, imgIndex) => (
-                      <div key={imgIndex} className="content-image-wrap">
+                      <figure key={imgIndex} className="content-image-wrap">
                         <img src={img.imagePath} alt="" className="content-graphic" />
-                        {img.imageOverlay ? (
-                          <span className="content-image-overlay">{img.imageOverlay}</span>
-                        ) : null}
-                      </div>
+                        <ImageCaption caption={img.imageCaption} />
+                      </figure>
                     ))}
                   </div>
                 </div>
@@ -143,17 +115,17 @@ function CohesionKitPage() {
                   <div className="ck-modular-layout">
                     <div className="ck-modular-left">
                       {modularComponentImages.map((img, imgIndex) => (
-                        <div key={imgIndex} className="content-image-wrap">
+                        <figure key={imgIndex} className="content-image-wrap">
                           <img src={img.imagePath} alt="" className="content-graphic" />
-                          <span className="content-image-overlay">{img.imageOverlay}</span>
-                        </div>
+                          <ImageCaption caption={img.imageCaption} />
+                        </figure>
                       ))}
                     </div>
 
-                    <div className="content-image-wrap ck-modular-right">
+                    <figure className="content-image-wrap ck-modular-right">
                       <img src={modularComponentsRightImage.imagePath} alt="" className="content-graphic" />
-                      <span className="content-image-overlay">{modularComponentsRightImage.imageOverlay}</span>
-                    </div>
+                      <ImageCaption caption={modularComponentsRightImage.imageCaption} />
+                    </figure>
                   </div>
                 </div>
               ) : null}
@@ -163,25 +135,22 @@ function CohesionKitPage() {
                   <div className="ck-engagement-layout">
                     <div className="ck-engagement-sketches">
                       {engagementSketches.map((img, imgIndex) => (
-                        <div key={imgIndex} className="content-image-wrap ck-engagement-sketch">
+                        <figure key={imgIndex} className="content-image-wrap ck-engagement-sketch">
                           <img src={img.imagePath} alt="" className="content-graphic ck-engagement-sketch-img" />
-                          {img.imageOverlay ? (
-                            <span className="content-image-overlay">{img.imageOverlay}</span>
-                          ) : null}
-                        </div>
+                          <ImageCaption caption={img.imageCaption} />
+                        </figure>
                       ))}
                     </div>
 
-                    <div className="content-image-wrap ck-engagement-final">
+                    <figure className="content-image-wrap ck-engagement-final">
                       <img src={finalEngagementModel.imagePath} alt="" className="content-graphic ck-engagement-final-img" />
-                      <span className="content-image-overlay">{finalEngagementModel.imageOverlay}</span>
-                    </div>
+                      <ImageCaption caption={finalEngagementModel.imageCaption} />
+                    </figure>
                   </div>
                 </div>
               ) : null}
             </div>
           ))}
-        </div>
       </div>
     </div>
   )

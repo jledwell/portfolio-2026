@@ -1,8 +1,17 @@
 // Content for ParametersServiceDiscoveryPage — same shape as contentData.js.
-// Placeholder lorem ipsum until final case-study copy is ready.
+//
+// Use this page to address the following job description requirements:
+// User-centered design. - Apply different tools and methodologies required for the problem, timing and context. Be transparent and mentor colleagues across stages of the design process.
+// Exploration and curiosity. - Prepare and lead research efforts aligning teams and converging on a common product and service vision. Include others and motivate with curiosity, a constant interest to learn, and default to doing. 
+// Strong research portfolio that demonstrates user-centered design approach & process, systems thinking, emphatic storytelling, and delivered user & business insights.
+// Experience creating design research plans, executing, synthesizing, and communicating findings in relation to desired business outcomes and experience quality.
+// Customer-facing experience facilitating workshops with subject matter experts and business leaders.
+// Flexibility and comfort with ambiguity, ill-defined problem spaces, and highly complex domains & organizations.
 
 import { createElement } from 'react'
 
+// Hidden on ParametersServiceDiscoveryPage (Goals → Outcomes summary grid).
+// Kept here so content can be restored without rewriting copy.
 export const parametersServiceDiscoverySummaryColumns = [
   {
     heading: 'Goals',
@@ -50,18 +59,22 @@ const PSD = `${import.meta.env.BASE_URL}images/03%20parameters%20service%20disco
 export const parametersServiceDiscoveryContentData = [
   {
     heading: 'Situation',
-    paragraph:
-      'The Parameters Service would replace a desktop file workflow with a modern cloud platform. The platform would enable cross-product data sharing.',
+    paragraphs: [
+      'Autodesk Parameters Service shares customer data across products. It replaces desktop file import / export workflows with a modern cloud platform.',
+      'When I joined in 2022, the service had a functioning back end and needed an interface. The development team had not discussed their new concept with customers.',
+      'I worked on this project for two months, alongside other design work.',
+      'This project exemplifies:',
+    ],
     bulletPoints: [
-      createElement(
-        'strong',
-        null,
-        'For years, customers told us the existing data workflow was cumbersome. (See customer image to the right.)'
-      ),
-      'When I joined, the service had a functioning back end and needed an interface. The project team had not discussed their new concept with customers.',
+      'User-centered design approach & process, systems thinking, emphatic storytelling, and delivered user & business insights.',
+      'Apply different tools and methodologies required for the problem, timing and context. Be transparent and mentor colleagues across stages of the design process.',
+      'Experience creating design research plans, executing, synthesizing, and communicating findings in relation to desired business outcomes and experience quality.',
+      'Customer-facing experience facilitating workshops with subject matter experts and business leaders.'
     ],
     imagePath: `${PSD}/customer-learning-example-shared-parameters.png`,
-    imageOverlay: '',
+    imageCaption: 'Customer-created documentation example. For years, customers told us the existing data workflow was cumbersome.',
+    browserFrame: true,
+    browserUrl: 'customer-wiki.internal/shared-parameters',
   },
   {
     heading: 'Discovery Process',
@@ -73,7 +86,7 @@ export const parametersServiceDiscoveryContentData = [
       'Teammates observed the sessions and joined group sensemaking meetings.',
     ],
     imagePath: `${PSD}/sample-discovery-template.png`,
-    imageOverlay: 'Sample research template',
+    imageCaption: 'Sample research template',
   },
   {
     heading: 'Analysis',
@@ -83,8 +96,10 @@ export const parametersServiceDiscoveryContentData = [
       'Notes from interviews converted to post-its.',
       'Two group sessions to discuss and affinitze feedback.',
       'How Might We (HMW) problem frames discussed for key affinity groups .',
+      'I reconciled the feedback from both sessions into a summary presentation.',
+      'I wrote usability issues as bugs in our QA tracking system.',
     ],
-    imageLabel: 'Placeholder image',
+    imagePath: `${PSD}/User%20Research%20Discovery%20Flow.png`,
   },
   {
     heading: 'Results',
@@ -96,12 +111,10 @@ export const parametersServiceDiscoveryContentData = [
       'Working with data had too many steps because required settings had to be entered one-by-one, manually.',
       'Many customers used third-party API addins to manage data, but API converage was incomplete, preventing a full workflow.',
     ],
-    imageLabel: 'Placeholder image',
   },
   {
     heading: 'Detailed Outcomes',
-    paragraph:
-      '',
+    paragraph: '',
     bulletPoints: [
       'We changed the system to enforce unique data names.',
       'I designed different duplicate data fixing and prevention workflows, and found an inexpensive solution to fit into the roadmap.',
@@ -109,6 +122,18 @@ export const parametersServiceDiscoveryContentData = [
       'I created a batch editing workflow which became one of our most popular features.',
       'The team greatly enhanced the API so third-party applications could work with data efficiently.'
     ],
-    imageLabel: 'Placeholder image',
+  },
+  {
+    heading: 'Customer Council',
+    paragraph:
+      'To get ongoing feedback after the study, I recruited key customers to join biweekly team Sprint Reviews.',
+    bulletPoints: [
+      'I selected 5 firms and 8 customer individuals, a mix of disciplines, company sizes, and countries.',
+      'I oriented them to our project goals with a presentation, setting expectations for consistent participation.',
+      'I coached engineers to present their work clearly and ask open-ended questions.',
+      'Results: Review questions changed from "How did you code that?" to value questions like "Why did you build that, and not this other feature I\'ve been asking for?'
+    ],
+    pullQuote:
+      "Your share-out helped broaden the perspective we all have of our customers, around what they think when it comes to platform and data, helping us to drive business objectives forward.",
   },
 ]

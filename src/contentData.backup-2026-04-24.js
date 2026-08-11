@@ -69,11 +69,11 @@ export const contentData = [
     images: [
       {
         imagePath: '/images/01%20platform/personas.png',
-        imageOverlay: 'Target personas reconciled',
+        imageCaption: 'Target personas reconciled',
       },
       {
         imagePath: '/images/01%20platform/workshop%20whiteboard.png',
-        imageOverlay: 'Stakeholder workshop whiteboard',
+        imageCaption: 'Stakeholder workshop whiteboard',
       },
     ],
   },
@@ -94,20 +94,20 @@ export const contentData = [
     images: [
       {
         imagePath: '/images/dialog-simplification.png',
-        imageOverlay: 'Simplifying for customer context',
+        imageCaption: 'Simplifying for customer context',
       },
       {
         imagePath: '/images/custom-fields-add-parameter.png',
-        imageOverlay: 'Add data using product context',
+        imageCaption: 'Add data using product context',
       },
       {
         imagePath: '/images/lists%20ui%20sketch.jpg',
-        imageOverlay: 'List UI sketch',
+        imageCaption: 'List UI sketch',
         rowId: 'lists-ui-pair',
       },
       {
         imagePath: '/images/lists%20final%20ui.png',
-        imageOverlay: 'List final UI',
+        imageCaption: 'List final UI',
         rowId: 'lists-ui-pair',
       },
     ],
