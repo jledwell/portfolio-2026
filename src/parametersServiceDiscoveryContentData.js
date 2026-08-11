@@ -48,6 +48,8 @@ export const parametersServiceDiscoverySummaryColumns = [
   },
 ]
 
+// Hidden on ParametersServiceDiscoveryPage (Research / Strategy / Systems pills).
+// Kept here so tags can be restored without rewriting copy.
 export const parametersServiceDiscoveryContentTags = [
   'Research',
   'Strategy',
@@ -60,10 +62,10 @@ export const parametersServiceDiscoveryContentData = [
   {
     heading: 'Situation',
     paragraphs: [
-      'Autodesk Parameters Service shares customer data across products. It replaces desktop file import / export workflows with a modern cloud platform.',
-      'When I joined in 2022, the service had a functioning back end and needed an interface. The development team had not discussed their new concept with customers.',
-      'I worked on this project for two months, alongside other design work.',
-      'This project exemplifies:',
+      'Autodesk Parameters Service is a cloud service to create and manage customer data. It replaces file import / export workflows with a cross-product platform.',
+      'When I joined in 2022, the service had APIs, and needed an interface. The development team had not talked with customers.',
+      'I did research, analysis, and design for two months, alongside other design work.',
+      'This case study exemplifies:',
     ],
     bulletPoints: [
       'User-centered design approach & process, systems thinking, emphatic storytelling, and delivered user & business insights.',
@@ -72,9 +74,9 @@ export const parametersServiceDiscoveryContentData = [
       'Customer-facing experience facilitating workshops with subject matter experts and business leaders.'
     ],
     imagePath: `${PSD}/customer-learning-example-shared-parameters.png`,
-    imageCaption: 'Customer-created documentation example. For years, customers told us the existing data workflow was cumbersome.',
-    browserFrame: true,
-    browserUrl: 'customer-wiki.internal/shared-parameters',
+    imageCaption: 'The cumbersome legacy import / export workflow.',
+    win95Dialog: true,
+    dialogTitle: 'Import Parameters',
   },
   {
     heading: 'Discovery Process',

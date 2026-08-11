@@ -68,6 +68,15 @@
   z-index: 1;
 }
 
+.content-page--parameters-service-discovery .content-page-title-divider {
+  display: block;
+  width: 100%;
+  height: 0;
+  margin: 0 0 2rem;
+  border: 0;
+  border-top: 1px solid #d4704d;
+}
+
 .content-summary-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -435,79 +444,96 @@
   color: #4a4a4a;
 }
 
-.browser-frame {
+.win95-dialog {
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 800px;
-  border: 1px solid rgba(44, 37, 32, 0.14);
-  border-radius: 10px;
-  background: #eceae6;
-  overflow: hidden;
-  box-shadow: 0 1px 2px rgba(44, 37, 32, 0.04);
+  padding: 3px;
+  background: #c0c0c0;
+  border-radius: 0;
+  box-shadow:
+    inset 1px 1px 0 #ffffff,
+    inset -1px -1px 0 #000000,
+    inset 2px 2px 0 #dfdfdf,
+    inset -2px -2px 0 #808080;
 }
 
-.browser-frame-chrome {
+.win95-dialog-titlebar {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.55rem 0.75rem;
-  background: linear-gradient(180deg, #f4f2ef 0%, #e8e5e0 100%);
-  border-bottom: 1px solid rgba(44, 37, 32, 0.1);
+  justify-content: space-between;
+  gap: 0.5rem;
+  min-height: 1.15rem;
+  padding: 2px 3px 2px 4px;
+  background: #000080;
+  color: #ffffff;
 }
 
-.browser-frame-dots {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  flex-shrink: 0;
-}
-
-.browser-frame-dots span {
-  width: 0.55rem;
-  height: 0.55rem;
-  border-radius: 50%;
-  background: #c9c4bc;
-}
-
-.browser-frame-dots span:nth-child(1) {
-  background: #d4704d;
-}
-
-.browser-frame-dots span:nth-child(2) {
-  background: #c4a35a;
-}
-
-.browser-frame-dots span:nth-child(3) {
-  background: #5f8f6b;
-}
-
-.browser-frame-url {
+.win95-dialog-title {
   flex: 1;
   min-width: 0;
-  padding: 0.3rem 0.65rem;
-  border-radius: 6px;
-  background: #faf9f7;
-  border: 1px solid rgba(44, 37, 32, 0.08);
-}
-
-.browser-frame-url-text {
-  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-family: 'Raleway', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 500;
-  line-height: 1.3;
-  color: #6a645c;
+  font-family: Tahoma, 'MS Sans Serif', 'Segoe UI', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
 }
 
-.browser-frame-viewport {
-  background: #faf9f7;
+.win95-dialog-close {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 14px;
+  background: #c0c0c0;
+  box-shadow:
+    inset 1px 1px 0 #ffffff,
+    inset -1px -1px 0 #000000,
+    inset 2px 2px 0 #dfdfdf,
+    inset -2px -2px 0 #808080;
 }
 
-.browser-frame-viewport .content-graphic {
+.win95-dialog-close-x {
+  position: relative;
+  width: 8px;
+  height: 8px;
+}
+
+.win95-dialog-close-x::before,
+.win95-dialog-close-x::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #000000;
+}
+
+.win95-dialog-close-x::before {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.win95-dialog-close-x::after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.win95-dialog-body {
+  margin-top: 3px;
+  background: #c0c0c0;
+  box-shadow:
+    inset 1px 1px 0 #808080,
+    inset -1px -1px 0 #ffffff,
+    inset 2px 2px 0 #000000,
+    inset -2px -2px 0 #dfdfdf;
+}
+
+.win95-dialog-body .content-graphic {
   display: block;
   width: 100%;
   max-width: none;

@@ -4,7 +4,6 @@ import './styles/ContentPage.css'
 import ImageCaption from './ImageCaption'
 import {
   parametersServiceDiscoveryContentData,
-  parametersServiceDiscoveryContentTags,
 } from './parametersServiceDiscoveryContentData'
 
 const SIDE_BY_SIDE_HEADINGS = new Set(['Results', 'Detailed Outcomes'])
@@ -60,21 +59,17 @@ function SectionMedia({ section }) {
     <div className="content-image">
       {section.imagePath ? (
         <figure className="content-image-wrap">
-          {section.browserFrame ? (
-            <div className="browser-frame">
-              <div className="browser-frame-chrome" aria-hidden="true">
-                <div className="browser-frame-dots">
-                  <span />
-                  <span />
-                  <span />
-                </div>
-                <div className="browser-frame-url">
-                  <span className="browser-frame-url-text">
-                    {section.browserUrl || 'example.com'}
-                  </span>
-                </div>
+          {section.win95Dialog ? (
+            <div className="win95-dialog">
+              <div className="win95-dialog-titlebar" aria-hidden="true">
+                <span className="win95-dialog-title">
+                  {section.dialogTitle || 'Dialog'}
+                </span>
+                <span className="win95-dialog-close">
+                  <span className="win95-dialog-close-x" />
+                </span>
               </div>
-              <div className="browser-frame-viewport">{image}</div>
+              <div className="win95-dialog-body">{image}</div>
             </div>
           ) : (
             image
@@ -116,13 +111,8 @@ function ParametersServiceDiscoveryPage() {
       <h1 className="content-page-title">
         Discovery to Outcomes: Parameters Service
       </h1>
-      <div className="content-page-tags">
-        {parametersServiceDiscoveryContentTags.map((tag) => (
-          <span key={tag} className="content-tag">
-            {tag}
-          </span>
-        ))}
-      </div>
+      <hr className="content-page-title-divider" aria-hidden="true" />
+      {/* Tags hidden; data kept in parametersServiceDiscoveryContentTags */}
       {/* Summary grid (Goals → Outcomes) hidden; data kept in parametersServiceDiscoverySummaryColumns */}
       <div className="content-column">
         {contentBlocks.map((block, index) => {
