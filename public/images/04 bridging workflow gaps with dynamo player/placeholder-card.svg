@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" role="img" aria-label="Dynamo Player case study">
+  <rect width="800" height="450" fill="#d4704d" opacity="0.12"/>
+  <rect x="0" y="0" width="800" height="450" fill="#faf9f7"/>
+  <rect x="120" y="96" width="560" height="258" rx="8" fill="#ffffff" stroke="#d4704d" stroke-width="2"/>
+  <circle cx="200" cy="170" r="28" fill="#d4704d" opacity="0.25"/>
+  <rect x="260" y="150" width="320" height="16" rx="4" fill="#c9c4bc"/>
+  <rect x="260" y="182" width="280" height="12" rx="4" fill="#e8e5e0"/>
+  <rect x="260" y="206" width="240" height="12" rx="4" fill="#e8e5e0"/>
+  <rect x="260" y="248" width="180" height="36" rx="6" fill="#1a4d2e" opacity="0.85"/>
+  <text x="400" y="390" text-anchor="middle" fill="#4a4a4a" font-family="Arial, sans-serif" font-size="20" font-weight="700">Bridging Workflow Gaps with Dynamo Player</text>
+</svg>

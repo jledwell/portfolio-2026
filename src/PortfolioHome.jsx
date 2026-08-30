@@ -4,6 +4,14 @@ import './styles/PortfolioHome.css'
 
 const portfolioItems = [
   {
+    id: 'bridging-workflow-gaps-with-dynamo-player',
+    title: 'Bridging Workflow Gaps with Dynamo Player',
+    description:
+      'Connecting expert automation workflows with approachable customer experiences.',
+    imagePath: `${import.meta.env.BASE_URL}images/04%20bridging%20workflow%20gaps%20with%20dynamo%20player/placeholder-card.svg`,
+    to: '/bridging-workflow-gaps-with-dynamo-player',
+  },
+  {
     id: 'parameters-service-discovery',
     title: 'Discovery to Outcomes: Parameters Service',
     description:

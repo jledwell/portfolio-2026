@@ -3,6 +3,7 @@ import PortfolioHome from './PortfolioHome.jsx'
 import ContentPage from './ContentPage.jsx'
 import CohesionKitPage from './CohesionKitPage.jsx'
 import ParametersServiceDiscoveryPage from './ParametersServiceDiscoveryPage.jsx'
+import BridgingWorkflowGapsWithDynamoPlayerPage from './BridgingWorkflowGapsWithDynamoPlayerPage.jsx'
 import './styles/App.css'
 
 function App() {
@@ -16,6 +17,10 @@ function App() {
           <Route
             path="/parameters-service-discovery"
             element={<ParametersServiceDiscoveryPage />}
+          />
+          <Route
+            path="/bridging-workflow-gaps-with-dynamo-player"
+            element={<BridgingWorkflowGapsWithDynamoPlayerPage />}
           />
         </Routes>
       </div>
